@@ -1,0 +1,28 @@
+<div id="skills">
+  <div class="container">
+    <div class="row">
+      <h1>Skills</h1>
+    </div>
+    <div class="progress-container">
+    </div>
+  </div>
+
+  <script>
+    var skills = ['HTML', 'CSS', 'Javascript', 'NodeJS',
+    'PHP', 'Java', 'C', 'C++', 'Ruby', 'Ocaml', 'Mongoose', 'mySQL', 'Matlab', 'LaTeX',
+  'Angular', 'Grails'];
+    var masteries = [90, 70, 80, 60, 70, 75, 30, 15, 40, 40, 20, 30,70, 40, 25, 5];
+
+    for (let i = 0; i < skills.length; i++) {
+      let skill = skills[i];
+      let mastery = masteries[i];
+      let res = "<h6>" + skill + "</h6>";
+      res += '<div class="determinate" style="width: ' + mastery + '%"></div>';
+      $('.progress-container').append(res);
+    }
+
+    $('.determinate').each(function(){
+      $(this).wrap("<div class='progress'></div>")
+    })
+
+  </script>

@@ -1,0 +1,233 @@
+@media screen and (min-width: 992px) {
+  .main-body {
+    margin-left: 350px;
+  }
+}
+
+@font-face {
+  font-family: "League Spartan Bold";
+  src: url("fonts/LeagueSpartan-Bold.otf") format("opentype");
+}
+
+html body {
+  height: 100%;
+  width: auto;
+}
+
+h1 {
+  font-family: "League Spartan Bold";
+}
+
+h1::before {
+  content: '>';
+  color: #FE5F55;
+}
+
+i.icon-orange {
+  color: #FE5F55;
+}
+
+p {
+  color: black;
+  font-size: 16px;
+}
+
+.row {
+  margin-bottom: 50px;
+}
+
+.circle {
+  width: 70%;
+  height: 70%;
+}
+
+.profile-pic {
+  opacity: 0;
+  margin-top: -2000px;
+}
+
+.profile-text {
+  color: white;
+  opacity: 0;
+}
+
+.contact {
+  margin-top: 40px;
+  font-size: 36px;
+}
+
+.contact a {
+  color: #F7F7FF;
+}
+
+#developer {
+  opacity: 0;
+}
+
+#artist {
+  opacity: 0;
+}
+
+#innovator {
+  opacity: 0;
+}
+
+.profile-text .material-icons {
+  opacity: 0;
+  margin-left: -30px;
+  font-size: 36px;
+}
+
+.main-body {
+  height: 100%;
+}
+
+.nav-extend-fixed {
+  position: fixed;
+  margin-left: 20px;
+}
+
+.user-view {
+  height: 100%;
+}
+
+.title {
+  margin-top: 40%;
+}
+
+.title h4 {
+  color: white;
+  font-size: 40px;
+}
+
+.sub-title h5 {
+  font-size: 15px;
+  color: #FE5F55;
+}
+
+.links {
+  background-color: #77ACA2;
+}
+
+.profile-header {
+  height: 350px;
+  background: linear-gradient(#086788, #086788);
+}
+
+.profile-wrapper {
+  height: 400px;
+  background-color: green;
+}
+
+.collection {
+  height: auto;
+  width: auto;
+  ;
+}
+
+#slide-out {
+  width: 350px;
+}
+
+.section-header {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/*home partial*/
+
+#home {
+  height: 100vh;
+  width: auto;
+  background-image: url("/public/images/blue-poly.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*-----------------------*/
+
+/*profile partial*/
+
+#profile {
+  background-color: #F6F7FF;
+  color: #086788;
+}
+
+#education {
+  background-color: #086788;
+  color: #F7F7FF;
+}
+
+.course-work {
+  color: #F7F7FF;
+}
+
+.course-work li::before {
+  content: '> ';
+  font-weight: bold;
+  color: #FE5F55;
+}
+
+/**/
+
+#experience {
+  background-color: #477CC6;
+  color: #F7F7FF;
+}
+
+#experience img {
+  width: 90%;
+  height: 90%;
+  margin-top: 20px;
+}
+
+#tech-experience {
+  background-color: #06AED5;
+  color: #086788;
+}
+
+#tech-experience img {
+  width: 90%;
+  height: 90%;
+  margin-top: 20px;
+}
+
+#projects {
+  background-color: #F7F7FF;
+  color: #477CC6;
+}
+
+.card {
+  height: 300px;
+}
+
+.card-image {
+  width: 300px;
+  height: 300px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
+.classification {
+  font-size: 15px;
+}
+
+/*-----------------------*/
+
+#skills {
+background-color: #d9dce0;
+}
+
+
+.name {
+  font-family: 'League Spartan Bold', Arial, sans-serif;
+  color: white;
+}
+
+.container {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}

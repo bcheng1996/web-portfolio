@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='/materialize-css/dist/css/materialize.css' />
+  <link rel="stylesheet" href="/public/css/main.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <script src="jquery/dist/jquery.min.js"></script>
+  <script src="/materialize-css/dist/js/materialize.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+  <title>Benny Cheng</title>
+</head>
+
+<body>
+  <div class="nav-extend-fixed">
+    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons icon-orange" style="font-size:48px;">menu</i></a>
+  </div>
+
+
+  <ul id="slide-out" class="sidenav sidenav-fixed">
+    <li>
+      <div class="profile-header">
+        <div class="user-view right-align">
+          <div class="title">
+            <h4>Benny <b>Cheng</b></h4>
+          </div>
+          <div class="sub-title">
+            <h5> Web Developer | Engineer | Film Maker </h5>
+          </div>
+          <div class="contact row">
+            <a href="https://www.linkedin.com/in/benny-cheng-787159115/">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/bcheng1996">
+                <i class="fab fa-github"></i>
+            </a>
+
+          </div>
+          <!-- <a class="center-align" href="#user"><img class="circle" id="profile" src="/public/images/me.jpg"></a> -->
+        </div>
+      </div>
+    </li>
+
+    <li><a href="#profile"  class="waves-effect"><i class="material-icons">person</i> Profile</a></li>
+    <li><a href="#education" class="waves-effect"><i class="material-icons">school</i> Education</a></li>
+    <li><a href="#experience"  class="waves-effect"><i class="material-icons">business_center</i>Experience</a></li>
+    <li><a href="#projects" class="waves-effect"><i class="material-icons">folder_shared</i>Projects</a></li>
+    <li><a href="#skills" class="waves-effect"><i class="material-icons">equalizer</i>Skills</a></li>
+  </ul>
+
+  <div class="main-body">
+    {{{body}}} {{>profile}} {{>education}} {{>experience}} {{>projects}} {{>skills}} {{>footer}}
+  </div>
+  <script src="jquery/dist/jquery.min.js"></script>
+  <script src="/materialize-css/dist/js/materialize.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('#slide-out').sidenav({
+        preventScrolling: false
+      });
+
+    });
+    $('li > a').click(function() {
+      let elementtoScroll = $(this).attr('href');
+      $('html, body').animate({
+        scrollTop: $(elementtoScroll).offset().top
+      }, 300);
+    })
+  </script>
+</body>
+
+
+</html>

@@ -1,0 +1,64 @@
+<div id="home" class="valign-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="profile-pic col s6">
+        <img class="circle" src="public/images/me.jpg" />
+      </div>
+
+      <div class="profile-text col s6">
+        <div id="developer">
+          <h2><i class="material-icons">layers</i> developer</h2></div>
+        <div id="artist">
+          <h2><i class="material-icons">memory</i> tech geek</h2></div>
+        <div id="innovator">
+          <h2><i class="material-icons">color_lens</i> designer</h2></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  $('.profile-pic').ready(function() {
+    var profile_pic = $('.profile-pic');
+    var profile_text = $('.profile-text');
+    var developer = $('#developer');
+    var artist = $('#artist');
+    var innovator = $('#innovator');
+    var profile_icons = $('.profile-text').find($('.material-icons'));
+    console.log(profile_icons);
+    profile_pic.animate({
+      marginTop: '-700px',
+      opacity: '0.6'
+    }, 'slow');
+    profile_pic.animate({
+      marginTop: '0px',
+      opacity: '0.9'
+    });
+    profile_pic.animate({
+      opacity: '1'
+    }, function() {
+      profile_text.animate({
+        opacity: '1'
+      }, function() {
+        developer.animate({
+          opacity: '1'
+        });
+        artist.delay(500).animate({
+          opacity: '1'
+        });
+        innovator.delay(1000).animate({
+          opacity: '1'
+        });
+        profile_icons.delay(1500).animate({
+          opacity: '1',
+          marginLeft: '0px'
+        });
+      });
+    });
+  });
+
+  $('.profile-text').ready(function() {
+
+  });
+</script>
