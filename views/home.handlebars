@@ -1,4 +1,48 @@
-<div id="home" class="valign-wrapper">
+<div id="particles-js"></div>
+<div class="home-container">
+  <!-- particles.js container -->
+  <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  {{!-- <div class="parallax"><img id="main-bg" src="public/images/main_bg4k.png"></div> --}}
+  <div class="center">
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="container header-text" data-aos="fade-up">
+          <h1 class="main-header white-text">Hello, I'm Benny<span class="semicolon">;</span>
+          </h1>
+          <h4 class="main-subheader" data-aos="fade-up" data-aos-delay="300">
+            <span class="white-text"> a fullstack mobile web and cloud developer. </span>
+          </h4>
+          <div class="button-navs">
+            <button class="btn-large waves-effect waves-light outline-white">About me
+              <i id="arrow_forward" class="arrow material-icons right">arrow_forward</i>
+              <i id="arrow_downward" class="arrow material-icons right">arrow_downward</i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade" data-aos-easing="ease-in-quart" data-aos-delay="0" class="left col m6">
+        <img src="public/images/b_logo.png" class="light logo-large">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  $(document).ready(function () {
+    $('.parallax').parallax();
+  });
+
+  document.addEventListener('aos:in:header', ({ detail }) => {
+    console.log('animated out', detail);
+  });
+
+</script>
+
+
+
+{{!-- <div id="home" class="valign-wrapper">
   <div class="container">
     <div class="row">
       <div class="profile-pic col s6">
@@ -7,11 +51,14 @@
 
       <div class="profile-text col s6">
         <div id="developer">
-          <h2><i class="material-icons">layers</i> developer</h2></div>
+          <h2><i class="material-icons">layers</i> developer</h2>
+        </div>
         <div id="artist">
-          <h2><i class="material-icons">memory</i> tech geek</h2></div>
+          <h2><i class="material-icons">memory</i> tech geek</h2>
+        </div>
         <div id="innovator">
-          <h2><i class="material-icons">color_lens</i> designer</h2></div>
+          <h2><i class="material-icons">color_lens</i> designer</h2>
+        </div>
       </div>
     </div>
   </div>
@@ -19,7 +66,7 @@
 
 
 <script>
-  $('.profile-pic').ready(function() {
+  $('.profile-pic').ready(function () {
     var profile_pic = $('.profile-pic');
     var profile_text = $('.profile-text');
     var developer = $('#developer');
@@ -37,10 +84,10 @@
     });
     profile_pic.animate({
       opacity: '1'
-    }, function() {
+    }, function () {
       profile_text.animate({
         opacity: '1'
-      }, function() {
+      }, function () {
         developer.animate({
           opacity: '1'
         });
@@ -58,7 +105,7 @@
     });
   });
 
-  $('.profile-text').ready(function() {
+  $('.profile-text').ready(function () {
 
   });
-</script>
+</script> --}}

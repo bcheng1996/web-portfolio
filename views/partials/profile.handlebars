@@ -1,20 +1,76 @@
 <div id="profile">
-  <div class="container">
-    <div class="row"></div>
-    <h1 class="section-header">Profile</h1>
-    <p>I am an avid developer/programmer/geek who is infatiated with all things tech related. From algorithms to computer vision, I find myself tinkering with just about anything in the domain.
+  <div data-aos="fade-up" data-aos-anchor="#profile" class="container">
+    <h1 data-aos="fade-right" data-aos-anchor="#profile" class="black-text section-header">About</h1>
+    <p class="small-text"> I am an avid developer/programmer/geek who is infatiated with all things tech related.
+      From algorithms to
+      computer vision, I find myself tinkering with just about anything in the domain.
     </p>
+    <div class="row" id="profile-anchor1">
+      <div class="col m3 s12 profile-icon">
+        <div class="container">
+          <img class="small" src="public/images/react.png">
+          <p class="label">MERN</p>
+          <p class="small-text">Mongo, Express, React, Node Developer</p>
+        </div>
+      </div>
+      <div class="col m3 s12 profile-icon">
+        <div class="container">
+          <img class="small" src="public/images/cloud.png">
+          <p class="label">Cloud</p>
+          <p class="small-text">Experienced developer on the AWS platform</p>
 
-    <p>
-      I am a creature that oscillates between the logisitical realms of computer science such as improving algorithmic time complexities and the abstract beauty of computer design such as UI and UX. As such, I have an inclination for not just full stack development,
-      but also anything and everything deployable to users.
-    </p>
-    <p>
-      Outside of programming, I enjoy playing fingerstyle guitar and listening to music (recently fell in love with John Denver's Take Me Home, Country Roads). I also enjoy producing digital media such as short films, posters, and art.
-    </p>
-    <!-- <div class="video-container" style="margin-top: 50px;">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/77Vr1bOXHjU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div> -->
+        </div>
+      </div>
+      <div class="col m3 s12 profile-icon">
+        <div class="container">
+          <img class="small" src="public/images/ml.png">
+          <p class="label">Machine Learning</p>
+          <p class="small-text">Python, Tensorflow, Sklearn data scientist</p>
+        </div>
+      </div>
+      <div class="col m3 s12 profile-icon">
+        <div class="container">
+          <img class="small" src="public/images/art.png">
+          <p class="label">Design</p>
+          <p class="small-text">CSS, Photoshop, and film content creator</p>
+        </div>
+      </div>
+    </div>
+    <div data-aos="fade" data-aos-anchor="#profile-anchor1" class="row">
+      <div class="col m5">
+        <img class="med" src="public/images/me2.png">
+      </div>
+      <div class="col m7">
+        <div class="skills-tabs">
+          <div class="row">
+            <div class="col s12">
+              <ul class="tabs">
+                <li class="tab col s3"><a href="#test1">Web</a></li>
+                <li class="tab col s3"><a href="#test2">Mobile</a></li>
+                <li class="tab col s3"><a href="#test3">Cloud</a></li>
+                <li class="tab col s3"><a href="#test4">Data Science</a></li>
+              </ul>
+            </div>
+            <div id="test1" >
+              <div class="ldBar" data-preset="energy" style="height: 40px; width: 100%" data-value="40"></div>
+            </div>
+            <div id="test2" class="col s12">
+              <div class="ldBar" data-value="50"></div>
+            </div>
+            <div id="test3" class="col s12">Test 3</div>
+            <div id="test4" class="col s12">Test 4</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
+
+<script>
+  $(document).ready(function () {
+    $('.tabs').tabs({
+      swipeable: true,
+    });
+  });
+</script>
