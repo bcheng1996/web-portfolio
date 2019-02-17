@@ -1,4 +1,4 @@
-<div id="profile">
+<div id="link-profile">
   <div data-aos="fade-up" data-aos-anchor="#profile" class="container">
     <h1 data-aos="fade-right" data-aos-anchor="#profile" class="black-text section-header">About</h1>
     <p class="small-text"> I am an avid developer/programmer/geek who is infatiated with all things tech related.
@@ -37,28 +37,42 @@
       </div>
     </div>
     <div data-aos="fade" data-aos-anchor="#profile-anchor1" class="row">
-      <div class="col m5">
-        <img class="med" src="public/images/me2.png">
+      <div class="col l6 m12 s12">
+        <div >
+          <img class="med center-image" src="public/images/me2.png">
+        </div>
       </div>
-      <div class="col m7">
+      <div class="center-content col l6 m12 s12">
         <div class="skills-tabs">
           <div class="row">
             <div class="col s12">
-              <ul class="tabs">
-                <li class="tab col s3"><a href="#test1">Web</a></li>
-                <li class="tab col s3"><a href="#test2">Mobile</a></li>
-                <li class="tab col s3"><a href="#test3">Cloud</a></li>
-                <li class="tab col s3"><a href="#test4">Data Science</a></li>
+              <ul class="tabs" >
+                <li class="tab col s3"><a href="#languages">Languages</a></li>
+                <li class="tab col s3"><a href="#frameworks">Frameworks</a></li>
+                <li class="tab col s3"><a href="#databases">Databases</a></li>
+                <li class="tab col s3"><a href="#tools">Tools</a></li>
               </ul>
             </div>
-            <div id="test1" >
-              <div class="ldBar" data-preset="energy" style="height: 40px; width: 100%" data-value="40"></div>
+            <div id="languages" >
+              <div class="languages-wrapper">
+                
+              </div>
             </div>
-            <div id="test2" class="col s12">
-              <div class="ldBar" data-value="50"></div>
+            <div id="frameworks" class="col s12">
+              <div class="frameworks-wrapper">
+                
+              </div>
             </div>
-            <div id="test3" class="col s12">Test 3</div>
-            <div id="test4" class="col s12">Test 4</div>
+            <div id="databases" class="col s12">
+              <div class="databases-wrapper">
+                
+              </div>
+            </div>
+            <div id="tools" class="col s12">
+              <div class="tools-wrapper">
+                
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -70,7 +84,82 @@
 <script>
   $(document).ready(function () {
     $('.tabs').tabs({
-      swipeable: true,
+      swipeable: false,
     });
   });
+
+  function imageExists(url, callback) {
+  var img = new Image();
+  img.onload = function() { callback(true); };
+  img.onerror = function() { callback(false); };
+  img.src = url;
+}
+
+  let pre = "public/images/logo_"
+  let languages = ["js", "html", "css", "java", "csharp", "c", "python", "swift"]
+
+  let frameworks = ["nodejs", "react","angular", "ruby_rails", "spring", "express", "pandas", "tensorflow"]
+
+  let databases = ["mongo", "postgres", "firebase"]
+
+  let tools = ["aws", "docker", "github", "jupyter", "linux"]
+
+  // Languages
+  for(lang of languages){
+    let item = pre+lang
+    imageExists(item+'.png', function(exists){
+      if(exists == true){
+        $('.languages-wrapper').append(`<div class="logo-wrapper col s3 m4 l3 "><img class="skill-logo" 
+        src=${item}.png  ></div>`)
+      }else{
+        $('.languages-wrapper').append(`<div class="logo-wrapper col s3 m4 l3 "><img class="skill-logo" 
+        src=${item}.jpg  ></div>`)
+      }
+    })
+  }
+
+  for(fw of frameworks){
+    let item = pre+fw
+     imageExists(item+'.png', function(exists){
+      if(exists == true){
+        $('.frameworks-wrapper').append(`<div class="logo-wrapper col s3 m4 l3 "><img class="skill-logo" 
+        src=${item}.png  ></div>`)
+      }else{
+        $('.frameworks-wrapper').append(`<div class="logo-wrapper col s3 m4 l3 "><img class="skill-logo" 
+        src=${item}.jpg  ></div>`)
+      }
+    })
+  }
+
+   for(db of databases){
+    let item = pre+db
+     imageExists(item+'.png', function(exists){
+      if(exists == true){
+        $('.databases-wrapper').append(`<div class="logo-wrapper col s3 m4 l3 "><img class="skill-logo" 
+        src=${item}.png  ></div>`)
+      }else{
+        $('.databases-wrapper').append(`<div class="logo-wrapper col s3 m4 l3 "><img class="skill-logo" 
+        src=${item}.jpg  ></div>`)
+      }
+    })
+  }
+
+   for(tool of tools){
+    let item = pre+tool
+     imageExists(item+'.png', function(exists){
+      if(exists == true){
+        $('.tools-wrapper').append(`<div class="logo-wrapper col s3 m4 l3 "><img class="skill-logo" 
+        src=${item}.png  ></div>`)
+      }else{
+        $('.tools-wrapper').append(`<div class="logo-wrapper col s3 m4 l3 "><img class="skill-logo" 
+        src=${item}.jpg  ></div>`)
+      }
+    })
+  }
+
+  
+  
+
+
+
 </script>

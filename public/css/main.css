@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "Raleway";
-  src: url("fonts/Raleway-ExtraLight.ttf") format('truetype'); 
+  src: url("fonts/Raleway-Light.ttf") format('truetype'); 
 }
 
 html body {
@@ -32,6 +32,7 @@ i.icon-orange {
 p {
   color: black;
   font-size: 16px;
+  font-family: 'Raleway';
 }
 
 .main-header {
@@ -92,6 +93,10 @@ h1 {
   color: #F7F7FF;
 }
 
+a {
+  font-family: "Open Sans"
+}
+
 #developer {
   opacity: 0;
 }
@@ -132,6 +137,13 @@ h1 {
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
 }
+
+.center-image {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 .right {
   float: right
@@ -262,13 +274,7 @@ h1 {
 
 /*home partial*/
 
-#home {
-  height: 100vh;
-  width: auto;
-  background-image: url("/public/images/blue-poly.png");
-  background-position: center;
-  background-repeat: no-repeat;
-}
+
 
 /*-----------------------*/
 
@@ -279,10 +285,7 @@ h1 {
   color: #086788;
 }
 
-.flex {
-  display: flex;
-  flex-direction: column;
-}
+
 
 .small {
   width: 15vh;
@@ -292,7 +295,7 @@ h1 {
 
 .small-text {
   font-size: 16px;
-  opacity: 0.8;
+  opacity: 0.9;
   text-align: center;
 }
 
@@ -303,7 +306,7 @@ h1 {
 }
 
 .med { 
-  width: 45vh;
+  width: 80%;
 }
 
 #education {
@@ -329,6 +332,54 @@ h1 {
   height: 100px;
   width: 20px;
 }
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#web {
+  height:300px !important;
+}
+
+.web-skills{
+
+}
+
+.skill-logo {
+  height: 100%;
+  width: 100%;
+}
+
+.tabs {
+  margin-bottom: 10px;
+  
+}
+
+.tab {
+  font-family: "Raleway"
+}
+
+.tabs .tab a{
+  color:#000;
+} /*Black color to the text*/
+
+.tabs .tab a:hover {
+  background-color:#eee;
+  color:#000;
+} /*Text color on hover*/
+
+.tabs .tab a.active {
+  background-color: transparent;
+  color:#000;
+} /*Background and text color when a tab is active*/
+
+.tabs .indicator {
+  background-color:#000;
+} /*Color of underline*/
+
+
 
 /**/
 

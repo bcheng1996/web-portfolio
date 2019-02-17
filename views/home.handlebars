@@ -1,5 +1,5 @@
 <div id="particles-js"></div>
-<div class="home-container">
+<div class="home-container" id="link-home">
   <!-- particles.js container -->
   <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -14,7 +14,7 @@
             <span class="white-text"> a fullstack mobile web and cloud developer. </span>
           </h4>
           <div class="button-navs">
-            <button class="btn-large waves-effect waves-light outline-white">About me
+            <button class="btn-large waves-effect waves-light outline-white" id="about-button">About me
               <i id="arrow_forward" class="arrow material-icons right">arrow_forward</i>
               <i id="arrow_downward" class="arrow material-icons right">arrow_downward</i>
             </button>
@@ -32,6 +32,12 @@
 <script>
   $(document).ready(function () {
     $('.parallax').parallax();
+
+    $('#about-button').on('click', function(){
+       $('html,body').animate({
+        scrollTop: $("#profile").offset().top},
+        'slow');
+    })
   });
 
   document.addEventListener('aos:in:header', ({ detail }) => {

@@ -36,7 +36,7 @@ particlesJS("particles-js", {
         }
       },
       "size": {
-        "value": 2,
+        "value": 3,
         "random": true,
         "anim": {
           "enable": true,
@@ -72,7 +72,7 @@ particlesJS("particles-js", {
       "events": {
         "onhover": {
           "enable": true,
-          "mode": "bubble"
+          "mode": "bubble",
         },
         "onclick": {
           "enable": true,
@@ -108,3 +108,9 @@ particlesJS("particles-js", {
     },
     "retina_detect": true
   });
+
+
+  $('a[href*=\\#link-]').on('click', function(event){     
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+});
