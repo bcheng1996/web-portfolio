@@ -4,23 +4,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
   <link rel='stylesheet' href='/materialize-css/dist/css/materialize.css' />
   <link rel="stylesheet" href="/public/css/main.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="jquery/dist/jquery.min.js"></script>
   <script src="/materialize-css/dist/js/materialize.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/public/css/loading-bar.css">
+  <script type="text/javascript" src="/public/loading-bar.js"></script>
   <title>Benny Cheng</title>
 </head>
 
 <body>
-  <div class="nav-extend-fixed">
-    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons icon-orange" style="font-size:48px;">menu</i></a>
+
+  <div class="navbar-fixed">
+    <nav class="navbar-gradient">
+      <div class="nav-wrapper">
+        <div data-aos="fade-up" data-aos-anchor="#profile" data-aos-anchor-placement="top-center">
+          <a href="#link-home" class="left brand-logo">
+            <img class="light logo-small" src="public/images/b_logo.png">
+          </a>
+        </div>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#profile"><b>About</b></a></li>
+          <li><a href="#experience"><b>Experiences</b></a></li>
+          <li><a href="#projects"><b>Projects</b></a></li>
+        </ul>
+      </div>
+    </nav>
   </div>
 
+  {{!-- <div class="nav-extend-fixed">
+    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons icon-orange"
+        style="font-size:48px;">menu</i></a>
+  </div> --}}
 
-  <ul id="slide-out" class="sidenav sidenav-fixed">
+
+
+  {{!-- <ul id="slide-out" class="sidenav sidenav-fixed">
     <li>
       <div class="profile-header">
         <div class="user-view right-align">
@@ -35,7 +60,7 @@
               <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="https://github.com/bcheng1996">
-                <i class="fab fa-github"></i>
+              <i class="fab fa-github"></i>
             </a>
 
           </div>
@@ -44,34 +69,30 @@
       </div>
     </li>
 
-    <li><a href="#profile"  class="waves-effect"><i class="material-icons">person</i> Profile</a></li>
+    <li><a href="#profile" class="waves-effect"><i class="material-icons">person</i> Profile</a></li>
     <li><a href="#education" class="waves-effect"><i class="material-icons">school</i> Education</a></li>
-    <li><a href="#experience"  class="waves-effect"><i class="material-icons">business_center</i>Experience</a></li>
+    <li><a href="#experience" class="waves-effect"><i class="material-icons">business_center</i>Experience</a></li>
     <li><a href="#projects" class="waves-effect"><i class="material-icons">folder_shared</i>Projects</a></li>
     <li><a href="#skills" class="waves-effect"><i class="material-icons">equalizer</i>Skills</a></li>
-  </ul>
+  </ul> --}}
 
   <div class="main-body">
-    {{{body}}} {{>profile}} {{>education}} {{>experience}} {{>projects}} {{>skills}} {{>footer}}
+    {{{body}}} {{>profile}} {{>experience}} {{>projects}} {{>footer}}
   </div>
   <script src="jquery/dist/jquery.min.js"></script>
   <script src="/materialize-css/dist/js/materialize.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="public/animation.js"></script>
 
   <script>
-    $(document).ready(function() {
-      $('#slide-out').sidenav({
-        preventScrolling: false
-      });
+    $(document).ready(function () {
+      AOS.init()
 
     });
-    $('li > a').click(function() {
-      let elementtoScroll = $(this).attr('href');
-      $('html, body').animate({
-        scrollTop: $(elementtoScroll).offset().top
-      }, 300);
-    })
+
   </script>
+
 </body>
 
 

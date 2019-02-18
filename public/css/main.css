@@ -1,6 +1,6 @@
-@media screen and (min-width: 992px) {
-  .main-body {
-    margin-left: 350px;
+@media screen and (max-width: 600px) {
+  .logo-large {
+    display: none;
   }
 }
 
@@ -9,18 +9,20 @@
   src: url("fonts/LeagueSpartan-Bold.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Odachi";
+  src: url("fonts/Odachi.woff") format('woff');
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("fonts/Raleway-Light.ttf") format('truetype'); 
+}
+
 html body {
   height: 100%;
   width: auto;
-}
-
-h1 {
-  font-family: "League Spartan Bold";
-}
-
-h1::before {
-  content: '>';
-  color: #FE5F55;
+  font-family: "Open Sans";
 }
 
 i.icon-orange {
@@ -30,15 +32,39 @@ i.icon-orange {
 p {
   color: black;
   font-size: 16px;
+  font-family: 'Raleway';
 }
 
-.row {
-  margin-bottom: 50px;
+.main-header {
+  font-size: 8vh;
+  opacity: 0.9;
+  font-family: 'Open Sans';
+}
+
+h1 {
+  font-family: 'Odachi';
+  font-weight: bold;
+}
+
+.main-subheader {
+  opacity: 0.5;
+  font-size: 20px;
+  font-family: 'Raleway';
+  font-weight: 300;
+}
+
+.semicolon{
+  font-family: 'Courier';
+  font-weight: 100;
 }
 
 .circle {
   width: 70%;
   height: 70%;
+}
+
+.h1 {
+  font-family: Odachi
 }
 
 .profile-pic {
@@ -52,12 +78,22 @@ p {
 }
 
 .contact {
-  margin-top: 40px;
   font-size: 36px;
 }
 
+.contact i:hover {
+  z-index: 99999;
+  font-size: 40px;
+  color: #17182f;
+}
+
 .contact a {
+  z-index: 99999;
   color: #F7F7FF;
+}
+
+a {
+  font-family: "Open Sans"
 }
 
 #developer {
@@ -82,9 +118,97 @@ p {
   height: 100%;
 }
 
+.navbar-fixed {
+  position: fixed;
+}
+
+.header-text {
+  font-size: 78px;
+  font-weight: bold;
+  opacity: 0.7;
+  text-align: left;
+}
+
+.center {
+  width: 100%;
+  height: 50%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.center-image {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.right {
+  float: right
+}
+
+.row  {
+  z-index: 9999;
+}
+
+.parallax-container {
+  height: 100vh;
+  width: auto
+}
+
+#main-bg {
+  filter: brightness(40%);
+  width: 140%;
+}
+
+.center-screen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.logo-small {
+  width: 64px;
+}
+
+.light {
+  filter: brightness(0) invert(1);
+}
+
+.logo-large {
+  width: 40vh;
+  max-width: 100%;
+  overflow: hidden;
+  float: "left";
+}
+
+.dark {
+  filter: brightness(0);
+}
+
+.brand-logo {
+  margin-left: 20px;
+}
+
 .nav-extend-fixed {
   position: fixed;
   margin-left: 20px;
+}
+
+.navbar-gradient {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+  border-width: 0;
+  box-shadow: none;
+  opacity: 0.7;
+}
+
+.navbar-transparent {
+  opacity: 0.5;
+  background-color: black;
 }
 
 .user-view {
@@ -101,7 +225,7 @@ p {
 }
 
 .sub-title h5 {
-  font-size: 15px;
+  font-size: 13vh;
   color: #FE5F55;
 }
 
@@ -130,27 +254,78 @@ p {
 }
 
 .section-header {
+  font-family: "Open Sans";
   font-weight: bold;
   margin-bottom: 30px;
+  text-align: center;
 }
+
+.section-header-white {
+  font-family: "Open Sans";
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+}
+
+.section-header-white:after {
+  background: none repeat scroll 0 0 white;
+  bottom: -10px;
+  content: "";
+  display: block;
+  height: 10px;
+  position: relative;
+  width: 100px;
+  margin:auto;
+}
+
+.section-header:after {
+  background: none repeat scroll 0 0 black;
+  bottom: -10px;
+  content: "";
+  display: block;
+  height: 10px;
+  position: relative;
+  width: 100px;
+  margin:auto;
+}
+
 
 /*home partial*/
 
-#home {
-  height: 100vh;
-  width: auto;
-  background-image: url("/public/images/blue-poly.png");
-  background-position: center;
-  background-repeat: no-repeat;
-}
+
 
 /*-----------------------*/
 
 /*profile partial*/
 
 #profile {
-  background-color: #F6F7FF;
+  background-color: white;
   color: #086788;
+}
+
+
+
+.small {
+  width: 15vh;
+  display: block;
+  margin: auto;
+}
+
+.small-text {
+  font-size: 16px;
+  opacity: 0.9;
+  text-align: center;
+}
+
+
+.profile-icon {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.med { 
+  width: 80%;
 }
 
 #education {
@@ -168,18 +343,70 @@ p {
   color: #FE5F55;
 }
 
+.label {
+  text-align: center;
+}
+
+.brush-bar {
+  height: 100px;
+  width: 20px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#web {
+  height:300px !important;
+}
+
+.web-skills{
+
+}
+
+.skill-logo {
+  height: 100%;
+  width: 100%;
+}
+
+.tabs {
+  margin-bottom: 10px;
+  
+}
+
+.tab {
+  font-family: "Raleway"
+}
+
+.tabs .tab a{
+  color:#000;
+} /*Black color to the text*/
+
+.tabs .tab a:hover {
+  background-color:#eee;
+  color:#000;
+} /*Text color on hover*/
+
+.tabs .tab a.active {
+  background-color: transparent;
+  color:#000;
+} /*Background and text color when a tab is active*/
+
+.tabs .indicator {
+  background-color:#000;
+} /*Color of underline*/
+
+
+
 /**/
 
 #experience {
-  background-color: #477CC6;
+  background-color: rgb(30,30,30);
   color: #F7F7FF;
 }
 
-#experience img {
-  width: 90%;
-  height: 90%;
-  margin-top: 20px;
-}
 
 #tech-experience {
   background-color: #06AED5;
@@ -197,7 +424,7 @@ p {
   color: #477CC6;
 }
 
-.card {
+/* .card {
   height: 300px;
 }
 
@@ -209,7 +436,8 @@ p {
 .card img {
   width: 100%;
   height: 100%;
-}
+} */
+
 
 .classification {
   font-size: 15px;
@@ -230,4 +458,61 @@ background-color: #d9dce0;
 .container {
   padding-top: 10px;
   padding-bottom: 20px;
+}
+
+
+canvas {
+  top:0;
+  display: absolute;
+  width: 100vw;
+  height: 100vh; 
+}
+
+.home-container {
+
+  height: 100vh;
+  width: auto
+}
+
+#particles-js {
+  background-color: #17182f;
+  z-index: -1;
+  display: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+.btn-large {
+  background-color: transparent;
+  text-transform: none;
+  font-family: 'Raleway';
+  font-size: 24px;
+}
+
+.btn-large:hover {
+  background-color: rgba(150,124,176, 0.3);
+}
+
+.btn-large:hover #arrow_downward {
+  display: block;
+}
+
+.btn-large:hover #arrow_forward {
+  display: none;
+}
+
+
+#arrow_downward {
+  display: none;
+}
+
+#arrow_forward {
+  display: block;
+}
+
+.outline-white {
+  border: 1.4px solid white;
+  box-shadow: none;
 }

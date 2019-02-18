@@ -1,20 +1,165 @@
 <div id="profile">
-  <div class="container">
-    <div class="row"></div>
-    <h1 class="section-header">Profile</h1>
-    <p>I am an avid developer/programmer/geek who is infatiated with all things tech related. From algorithms to computer vision, I find myself tinkering with just about anything in the domain.
+  <div data-aos="fade-up" data-aos-anchor="#profile" class="container">
+    <h1 data-aos="fade-right" data-aos-anchor="#profile" class="black-text section-header">About</h1>
+    <p class="small-text"> I am an avid developer/programmer/geek who is infatiated with all things tech related.
+      From algorithms to
+      computer vision, I find myself tinkering with just about anything in the domain.
     </p>
+    <div class="row" id="profile-anchor1">
+      <div class="col m3 s12 profile-icon">
+        <div class="container">
+          <img class="small" src="public/images/react.png">
+          <p class="label">MERN</p>
+          <p class="small-text">Mongo, Express, React, Node Developer</p>
+        </div>
+      </div>
+      <div class="col m3 s12 profile-icon">
+        <div class="container">
+          <img class="small" src="public/images/cloud.png">
+          <p class="label">Cloud</p>
+          <p class="small-text">Experienced developer on the AWS platform</p>
 
-    <p>
-      I am a creature that oscillates between the logisitical realms of computer science such as improving algorithmic time complexities and the abstract beauty of computer design such as UI and UX. As such, I have an inclination for not just full stack development,
-      but also anything and everything deployable to users.
-    </p>
-    <p>
-      Outside of programming, I enjoy playing fingerstyle guitar and listening to music (recently fell in love with John Denver's Take Me Home, Country Roads). I also enjoy producing digital media such as short films, posters, and art.
-    </p>
-    <!-- <div class="video-container" style="margin-top: 50px;">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/77Vr1bOXHjU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div> -->
+        </div>
+      </div>
+      <div class="col m3 s12 profile-icon">
+        <div class="container">
+          <img class="small" src="public/images/ml.png">
+          <p class="label">Machine Learning</p>
+          <p class="small-text">Python, Tensorflow, Sklearn data scientist</p>
+        </div>
+      </div>
+      <div class="col m3 s12 profile-icon">
+        <div class="container">
+          <img class="small" src="public/images/art.png">
+          <p class="label">Design</p>
+          <p class="small-text">CSS, Photoshop, and film content creator</p>
+        </div>
+      </div>
+    </div>
+    <div data-aos="fade" data-aos-anchor="#profile-anchor1" class="row">
+      <div class="col l6 m12 s12">
+        <div >
+          <img class="med center-image" src="public/images/me2.png">
+        </div>
+      </div>
+      <div class="center-content col l6 m12 s12">
+        <div class="skills-tabs">
+          <div class="row">
+            <div class="col s12">
+              <ul class="tabs" >
+                <li class="tab col s3"><a href="#languages">Languages</a></li>
+                <li class="tab col s3"><a href="#frameworks">Frameworks</a></li>
+                <li class="tab col s3"><a href="#databases">Databases</a></li>
+                <li class="tab col s3"><a href="#tools">Tools</a></li>
+              </ul>
+            </div>
+            <div id="languages" >
+              <div class="languages-wrapper">
+                
+              </div>
+            </div>
+            <div id="frameworks" class="col s12">
+              <div class="frameworks-wrapper">
+                
+              </div>
+            </div>
+            <div id="databases" class="col s12">
+              <div class="databases-wrapper">
+                
+              </div>
+            </div>
+            <div id="tools" class="col s12">
+              <div class="tools-wrapper">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
+
+<script>
+  $(document).ready(function () {
+    $('.tabs').tabs({
+      swipeable: false,
+    });
+  });
+
+  function imageExists(url, callback) {
+  var img = new Image();
+  img.onload = function() { callback(true); };
+  img.onerror = function() { callback(false); };
+  img.src = url;
+}
+
+  let pre = "public/images/logo_"
+  let languages = ["js", "html", "css", "java", "csharp", "c", "python", "swift"]
+
+  let frameworks = ["nodejs", "react","angular", "ruby_rails", "spring", "express", "pandas", "tensorflow"]
+
+  let databases = ["mongo", "postgres", "firebase"]
+
+  let tools = ["aws", "docker", "github", "jupyter", "linux"]
+
+  // Languages
+  for(lang of languages){
+    let item = pre+lang
+    imageExists(item+'.png', function(exists){
+      if(exists == true){
+        $('.languages-wrapper').append(`<div class="logo-wrapper col s3 m4 l3 "><img class="skill-logo" 
+        src=${item}.png  ></div>`)
+      }else{
+        $('.languages-wrapper').append(`<div class="logo-wrapper col s3 m4 l3 "><img class="skill-logo" 
+        src=${item}.jpg  ></div>`)
+      }
+    })
+  }
+
+  for(fw of frameworks){
+    let item = pre+fw
+     imageExists(item+'.png', function(exists){
+      if(exists == true){
+        $('.frameworks-wrapper').append(`<div class="logo-wrapper col s3 m4 l3 "><img class="skill-logo" 
+        src=${item}.png  ></div>`)
+      }else{
+        $('.frameworks-wrapper').append(`<div class="logo-wrapper col s3 m4 l3 "><img class="skill-logo" 
+        src=${item}.jpg  ></div>`)
+      }
+    })
+  }
+
+   for(db of databases){
+    let item = pre+db
+     imageExists(item+'.png', function(exists){
+      if(exists == true){
+        $('.databases-wrapper').append(`<div class="logo-wrapper col s3 m4 l3 "><img class="skill-logo" 
+        src=${item}.png  ></div>`)
+      }else{
+        $('.databases-wrapper').append(`<div class="logo-wrapper col s3 m4 l3 "><img class="skill-logo" 
+        src=${item}.jpg  ></div>`)
+      }
+    })
+  }
+
+   for(tool of tools){
+    let item = pre+tool
+     imageExists(item+'.png', function(exists){
+      if(exists == true){
+        $('.tools-wrapper').append(`<div class="logo-wrapper col s3 m4 l3 "><img class="skill-logo" 
+        src=${item}.png  ></div>`)
+      }else{
+        $('.tools-wrapper').append(`<div class="logo-wrapper col s3 m4 l3 "><img class="skill-logo" 
+        src=${item}.jpg  ></div>`)
+      }
+    })
+  }
+
+  
+  
+
+
+
+</script>
