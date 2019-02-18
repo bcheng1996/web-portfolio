@@ -78,14 +78,13 @@ h1 {
 }
 
 .contact {
-  margin-top: 150px;
   font-size: 36px;
 }
 
 .contact i:hover {
   z-index: 99999;
   font-size: 40px;
-  color: grey;
+  color: #17182f;
 }
 
 .contact a {
