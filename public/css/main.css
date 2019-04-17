@@ -82,30 +82,69 @@ h1 {
 }
 
 .contact i:hover {
-  z-index: 99999;
-  font-size: 40px;
-  color: #17182f;
+  animation-name: pulse;
+  animation-duration: 4s; 
+  animation-timing-function: ease-in-out; 
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0% {
+    font-size: 33px;
+    color: rgb(179, 179, 179)
+  }
+  25% {
+    font-size: 34px;
+    color: rgb(221, 221, 221)
+  }
+  50% {
+    font-size: 35px;
+    color: white;
+  }
+  75% {
+    font-size: 34px;
+    color: rgb(221, 221, 221)
+
+  }
+  100% {
+    font-size: 33px;
+    color: rgb(179, 179, 179)
+  }
 }
 
 .contact a {
   z-index: 99999;
-  color: #F7F7FF;
+  color: rgb(179, 179, 179);
 }
 
 a {
   font-family: "Open Sans"
 }
 
-#developer {
-  opacity: 0;
+#linkedin-link {
+  font-size: 32px;
+  /* transform: rotate(-80deg); */
+  position: absolute;
+  top: 150px;
+  right: 655px;
 }
 
-#artist {
-  opacity: 0;
+#github-link {
+  font-size: 32px;
+  /* transform: rotate(-60deg); */
+  position: absolute;
+  top: 70px;
+  right: 619px;
 }
 
-#innovator {
-  opacity: 0;
+#resume-link {
+  font-size: 32px;
+  /* transform: rotate(-30deg); */
+  position: absolute;
+  top: 10px;
+  right: 564px;
 }
 
 .profile-text .material-icons {
@@ -373,7 +412,6 @@ a {
 
 .tabs {
   margin-bottom: 10px;
-  
 }
 
 .tab {
@@ -422,6 +460,10 @@ a {
 #projects {
   background-color: #F7F7FF;
   color: #477CC6;
+}
+.card-image-horizontal {
+  width: 300px;
+  height: 300px;
 }
 
 /* .card {

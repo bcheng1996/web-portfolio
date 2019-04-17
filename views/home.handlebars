@@ -23,6 +23,17 @@
       </div>
       <div data-aos="fade" data-aos-easing="ease-in-quart" data-aos-delay="0" class="left col m6">
         <img src="public/images/b_logo.png" class="light logo-large">
+        <div class="contact">
+          <a id="linkedin-link" href="https://www.linkedin.com/in/benny-cheng-787159115/">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a id="github-link" href="https://github.com/bcheng1996">
+            <i class="fab fa-github"></i>
+          </a>
+          <a id="resume-link" href="public/Resume.pdf">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -33,9 +44,10 @@
   $(document).ready(function () {
     $('.parallax').parallax();
 
-    $('#about-button').on('click', function(){
-       $('html,body').animate({
-        scrollTop: $("#profile").offset().top},
+    $('#about-button').on('click', function () {
+      $('html,body').animate({
+        scrollTop: $("#profile").offset().top
+      },
         'slow');
     })
   });
