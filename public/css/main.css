@@ -125,15 +125,15 @@ a {
 
 #linkedin-link {
   font-size: 32px;
-  transform: rotate(-80deg);
+  /* transform: rotate(-80deg); */
   position: absolute;
   top: 150px;
-  right: 650px;
+  right: 655px;
 }
 
 #github-link {
   font-size: 32px;
-  transform: rotate(-60deg);
+  /* transform: rotate(-60deg); */
   position: absolute;
   top: 70px;
   right: 619px;
@@ -141,10 +141,10 @@ a {
 
 #resume-link {
   font-size: 32px;
-  transform: rotate(-30deg);
+  /* transform: rotate(-30deg); */
   position: absolute;
   top: 10px;
-  right: 560px;
+  right: 564px;
 }
 
 .profile-text .material-icons {
