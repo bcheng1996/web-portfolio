@@ -4,9 +4,155 @@
       <h1 class="section-header black-text">Projects</h1>
     </div>
 
-    <div class="row">
-      <div class="col s12 m6 l4">
-        <div class="card med">
+
+
+    {{!-- hide for small devices --}}
+    <div class="row hide-on-small-only">
+      <div class="col s12 l12 l12">
+        <div class="card horizontal">
+          <div class="card-image card-image-horizontal">
+            <img src="public/images/ae.png">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <span class="card-title">Rotobrush</span>
+              <p>An implementation of Adobe After Effects' rotobrush tool which tracks estimated motions of objects.
+              </p>
+              </br>
+              <b>Technology used: </b>
+              <p>Matlab</p>
+            </div>
+            <div class="card-action">
+              <a href="https://github.com/bcheng1996/rotobrush">Check it out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 l12 l12">
+        <div class="card horizontal">
+          <div class="card-image card-image-horizontal">
+            <img src="public/images/closecall.png">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <span class="card-title">Close Call</span>
+              <p>
+                A mobile application and full stack web service that efficiently connects first responders to motor
+                vehicle accident victims as an accident occurs. The application alerts the closes hospital and provides
+                the shortest route to the location.
+              </p>
+              </br>
+              <b>Technology used: </b>
+              <p>NodeJS, MongoDB, Android Studio, arcGIS API, AWS EC2</p>
+            </div>
+            <div class="card-action">
+              <a href="https://github.com/bcheng1996/CloseCall">Check it out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 l12 l12">
+        <div class="card horizontal">
+          <div class="card-image card-image-horizontal">
+            <img src="public/images/calendar.png">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <span class="card-title">MyEvents</span>
+              <p>
+                A crowdsourced data application that takes user submitted events and lists them in
+                a filterable table. Users can then view all events on Google maps.
+              </p>
+              </br>
+              <b>Technology used: </b>
+              <p>NodeJS, MongoDB</p>
+            </div>
+            <div class="card-action">
+              <a href="https://github.com/bcheng1996/MyEvents_public">Check it out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 l12 l12">
+        <div class="card horizontal">
+          <div class="card-image card-image-horizontal">
+            <img src="public/images/eventplanner.png">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <span class="card-title">Event Planner</span>
+              <p>
+                Applcation that takes database items of events and lists them along with their
+                associated information. Allows user to edit individual items as well as bulk edit
+                with dynamic filtering capabilities.
+              </p>
+              </br>
+              <b>Technology used: </b>
+              <p>Javascript, PHP, mySQL</p>
+            </div>
+            <div class="card-action">
+              <a href="https://github.com/bcheng1996/event-planner">Check it out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 l12 l12">
+        <div class="card horizontal">
+          <div class="card-image card-image-horizontal">
+            <img src="public/images/expo.jpeg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <span class="card-title">whatsEat</span>
+              <p>
+                Mobile application that helps picky people figure out what to eat.
+                Provides access to Yelp searches, nearby locations, and account registration.
+              </p>
+              </br>
+              <b>Technology used: </b>
+              <p>React Native, Firebase</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Coming soon!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 l12 l12">
+        <div class="card horizontal">
+          <div class="card-image card-image-horizontal">
+            <img src="public/images/expo.jpeg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <span class="card-title">Notice Me</span>
+              <p>
+                Simple mobile application that connects users through sockets.
+                Alerts connected users through push notifications as well as live alert feeds.
+              </p>
+              </br>
+              <b>Technology used: </b>
+              <p>React Native</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Coming soon!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  {{!-- show on smaller devices  --}}
+  <div class="row show-on-small">
+      <div class="col s12 l12 l12">
+        <div class="card">
           <div class="card-image">
             <img src="public/images/ae.png">
           </div>
@@ -26,8 +172,8 @@
         </div>
       </div>
 
-      <div class="col s12 m6 l4">
-        <div class="card med">
+      <div class="col s12 l12 l12">
+        <div class="card">
           <div class="card-image">
             <img src="public/images/closecall.png">
           </div>
@@ -50,8 +196,8 @@
         </div>
       </div>
 
-      <div class="col s12 m6 l4">
-        <div class="card med">
+      <div class="col s12 l12 l12">
+        <div class="card">
           <div class="card-image">
             <img src="public/images/calendar.png">
           </div>
@@ -73,8 +219,8 @@
         </div>
       </div>
 
-      <div class="col s12 m6 l4">
-        <div class="card med">
+      <div class="col s12 l12 l12">
+        <div class="card">
           <div class="card-image">
             <img src="public/images/eventplanner.png">
           </div>
@@ -97,8 +243,8 @@
         </div>
       </div>
 
-      <div class="col s12 m6 l4">
-        <div class="card med">
+      <div class="col s12 l12 l12">
+        <div class="card">
           <div class="card-image">
             <img src="public/images/expo.jpeg">
           </div>
@@ -120,8 +266,8 @@
         </div>
       </div>
 
-      <div class="col s12 m6 l4">
-        <div class="card med">
+      <div class="col s12 l12 l12">
+        <div class="card">
           <div class="card-image">
             <img src="public/images/expo.jpeg">
           </div>
@@ -143,12 +289,5 @@
         </div>
       </div>
     </div>
-
-
-
-
-
-
-  </div>
 
 </div>
